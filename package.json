@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "Signals an entire set of PIDs when any one dies.",
   "main": "index.js",
-  "scripts": {
-    "install": "node-gyp rebuild"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/hagemt/pact.git"
@@ -33,5 +30,8 @@
   "devDependencies": {
     "mocha": "^2.3.4",
     "should": "^8.1.1"
+  },
+  "bin": {
+    "pact": "cli.js"
   }
 }
