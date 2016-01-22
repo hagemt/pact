@@ -1,8 +1,12 @@
 {
-  "name": "pact",
-  "version": "0.1.0",
+  "name": "waitpids",
+  "version": "0.1.1",
   "description": "Signals an entire set of PIDs when any one dies.",
   "main": "index.js",
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/hagemt/pact.git"
@@ -32,6 +36,6 @@
     "should": "^8.1.1"
   },
   "bin": {
-    "pact": "cli.js"
+    "waitpids": "cli.js"
   }
 }
