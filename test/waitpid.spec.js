@@ -1,14 +1,13 @@
 /* eslint-env mocha */
-describe('natives', function () {
+/* globals should */
+var waitpid = require('../waitpid');
+
+describe('waitpid', function () {
 
 	'use strict';
 
-	it('has a waitpid:Function wrapper');
-
-	describe('waitpid', function () {
-
-		it('wraps native ::waitpid');
-
+	it('wraps native ::waitpid', function () {
+		waitpid.bind(null).should.throw(Error);
 	});
 
 });

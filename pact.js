@@ -1,11 +1,8 @@
-(function (Process) {
+(function (defaults, Process) {
 
 	'use strict';
 
 	var uniq = require('uniq');
-
-	var defaults = { signal: 'SIGTERM' };
-	defaults.poll = { milliseconds: 10 };
 
 	function compareProcesses (leftProcess, rightProcess) {
 		return (rightProcess.PID - leftProcess.PID);
@@ -40,7 +37,7 @@
 				if (!signalProcess.call(thisProcess)) {
 					pactProcesses.forEach(function (thatProcess) {
 						thatProcess.cancel(); // clearInterval
-						thatProcess.emit('end'); // kill
+						thatProcess.emit('end'); // process.kill
 					});
 				}
 			}, defaults.poll.milliseconds);
@@ -48,4 +45,4 @@
 		});
 	};
 
-}).call(this, require('./process'));
+}).call(this, require('./defaults'), require('./process'));

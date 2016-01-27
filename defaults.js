@@ -2,7 +2,9 @@
 
 	'use strict';
 
-	var defaults = { PID: { min: (1 << 0), max: (1 << 15) } };
+	var defaults = { signal: 'SIGTERM' }; // process.kill
+	defaults.poll = { milliseconds: 10 }; // setInterval
+	defaults.PID = { min: (1 << 0), max: (1 << 15) };
 
 	defaults.package = require('./package');
 	module.exports = (function frozen (object) {
