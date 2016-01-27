@@ -1,6 +1,6 @@
 {
   "name": "waitpids",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Signals an entire set of PIDs when any one dies.",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,6 @@
     "should": "^8.1.1"
   },
   "bin": {
-    "waitpids": "cli.js"
+    "waitpids": "scripts/waitpids.js"
   }
 }
