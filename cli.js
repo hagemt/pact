@@ -1,5 +1,7 @@
 var cli = (function (pact) {
 
+	'use strict';
+
 	this._name = pact.defaults.package.name;
 	this.version(pact.defaults.package.version);
 

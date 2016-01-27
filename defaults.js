@@ -1,5 +1,7 @@
 (function () {
 
+	'use strict';
+
 	var defaults = { PID: { min: (1 << 0), max: (1 << 15) } };
 
 	defaults.package = require('./package');
