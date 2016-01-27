@@ -1,6 +1,6 @@
 {
   "name": "waitpids",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Signals an entire set of PIDs when any one dies.",
   "main": "index.js",
   "scripts": {
