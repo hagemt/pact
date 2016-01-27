@@ -19,7 +19,7 @@
 		catch (error) { return false; } // TODO (teh): log error?
 	}
 
-	module.exports = function pactFunction () {
+	function pactFunction () {
 		if (arguments.length === 0) throw new Error('no PIDs provided');
 		var allProcesses = Array.prototype.slice.call(arguments).map(Process);
 		var pactProcesses = filterProcesses(uniq(allProcesses, compareProcesses));
@@ -43,6 +43,10 @@
 			}, defaults.poll.milliseconds);
 			return thisProcess;
 		});
-	};
+	}
+
+	pactFunction.defaults = defaults;
+	pactFunction.Process = Process;
+	module.exports = pactFunction;
 
 }).call(this, require('./defaults'), require('./process'));

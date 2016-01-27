@@ -1,10 +1,9 @@
 {
   "name": "waitpids",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Signals an entire set of PIDs when any one dies.",
   "main": "index.js",
   "scripts": {
-    "install": "node-gyp rebuild",
     "test": "mocha"
   },
   "repository": {
@@ -28,7 +27,6 @@
   "homepage": "https://github.com/hagemt/pact#readme",
   "dependencies": {
     "commander": "^2.9.0",
-    "nan": "^2.2.0",
     "uniq": "^1.0.1"
   },
   "devDependencies": {
