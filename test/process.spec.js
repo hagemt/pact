@@ -1,7 +1,9 @@
 /* eslint-env mocha */
-var Process = require('../process');
+var Process = require('../pact/process');
 
 describe('Process', function () {
+
+	'use strict';
 
 	before(function () {
 		Process.should.be.a.Function().of.length(1);
